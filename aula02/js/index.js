@@ -28,11 +28,36 @@ console.log(frase);
 document.querySelector('p').innerHTML = frase;
 */
 
-var ano = parseInt(prompt("Em que ano estamos?"));
+/* var ano = parseInt(prompt("Em que ano estamos?"));
 var anoNascimento = parseInt(prompt("Em que você nasceu?"));
 var nome = prompt("Digite aqui o seu nome"); 
 
 var idadeAtual = ano - anoNascimento;
 var fraseFinal = "Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + "e sua idade atualmente é " + idadeAtual + ", certo?"
 
-document.querySelector('p').innerHTML = fraseFinal;
+/*document.querySelector('p').innerHTML = fraseFinal;
+document.getElementsByClassName('p').innerHTML = fraseFinal; */
+
+/*var ano = parseInt(prompt("Em que ano estamos?"));
+var anoNascimento = parseInt(prompt("Em que ano você nasceu?"));
+var nome = prompt("Digite aqui o seu nome"); 
+
+var idadeAtual = ano - anoNascimento;
+var fraseFinal = "Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + " e ao fim deste ano sua idade será " + idadeAtual + ", certo?";
+
+document.getElementById('meuParagrafo').innerHTML = fraseFinal */
+
+
+function obterRespostas() {
+    var ano = parseInt(prompt("Em que ano estamos?"));
+    var anoNascimento = parseInt(prompt("Em que ano você nasceu?"));
+    var nome = prompt("Digite aqui o seu nome"); 
+
+    var idadeAtual = ano - anoNascimento;
+    var fraseFinal = "🤔 Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + " e sua idade atualmente é " + idadeAtual + ", certo?";
+
+    document.getElementById('meuParagrafo').innerHTML = fraseFinal;
+}
+
+// Chama a função automaticamente quando a página carrega
+window.onload = obterRespostas;
