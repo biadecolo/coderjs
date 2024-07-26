@@ -21,10 +21,9 @@ else{
     alert("O seu número não está na nossa base de dados");
 }
 
-*/ 
+*/
 
-
-
+/*
 function obterRespostas() {
     var numero = parseInt(prompt("Digite um número de 1 a 100"));
 
@@ -68,5 +67,35 @@ function obterRespostas() {
     document.getElementById('meuParagrafo').innerHTML = fraseFinal;
 }
 
-// Chama a função automaticamente quando a página carrega
+window.onload = obterRespostas;
+*/
+
+function obterRespostas(){ 
+
+    var input = prompt("Digite uma letra:");
+
+    if (input === null || input === "") {
+        document.getElementById('resultado').innerHTML = "🤔 Uai. Você não digitou nada.";
+    } 
+    
+    else {
+        var letra = input.toLowerCase();
+        var vogais = ["a", "e", "i", "o", "u"];
+
+        if (vogais.includes(letra)) {
+            frase = "Você digitou uma vogal! 🪩";
+        } 
+        
+        else if (letra.match(/[a-z]/i)) {
+            frase = "Você digitou uma consoante.";
+        } 
+        
+        else {
+            frase = "Você não digitou uma letra válida.";
+        }
+    }
+
+    document.getElementById('meuParagrafo').innerHTML = frase;
+
+}
 window.onload = obterRespostas;

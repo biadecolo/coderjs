@@ -54,7 +54,7 @@ function obterRespostas() {
     var nome = prompt("Digite aqui o seu nome"); 
 
     var idadeAtual = ano - anoNascimento;
-    var fraseFinal = "🤔 Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + " e sua idade atualmente é " + idadeAtual + ", certo?";
+    var fraseFinal = "🤔 Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + " e ao final deste ano você terá " + idadeAtual + ", certo?";
 
     document.getElementById('meuParagrafo').innerHTML = fraseFinal;
 }
