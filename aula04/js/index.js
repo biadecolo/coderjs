@@ -1,14 +1,17 @@
 function isEven(numero) {
-    var numero = parseInt(prompt("Digite um número:"));
     return numero % 2 === 0;
 }
 
-// Exemplo de uso
+function handleButtonClick() {
+    var numeroDigitado = parseInt(prompt("Digite um número:"));
 
-if (isEven(numero)) {
-    alert("O número " + numero + " é par.");
+    if (isEven(numeroDigitado)) {
+        document.getElementById('meuParagrafo').innerHTML = "O número " + numeroDigitado + " é par. <br> <i style='color: lightgray'>Number " + numeroDigitado + " is even.</i>";
+    } else {
+        document.getElementById('meuParagrafo').innerHTML = "O número " + numeroDigitado + " é ímpar. <br> <i style='color: lightgray'>Number " + numeroDigitado + " is uneven.</i>";
+    }
 }
 
-else {
-    alert("O número " + numero + " é ímpar.");
-}
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('meuBotao').addEventListener('click', handleButtonClick);
+});
