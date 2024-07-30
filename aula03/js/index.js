@@ -83,15 +83,15 @@ function obterRespostas(){
         var vogais = ["a", "e", "i", "o", "u"];
 
         if (vogais.includes(letra)) {
-            frase = "Você digitou uma vogal! 🪩";
+            frase = "🪩 Você digitou uma vogal!";
         } 
         
         else if (letra.match(/[a-z]/i)) {
-            frase = "Você digitou uma consoante.";
+            frase = "🪩 Você digitou uma consoante.";
         } 
         
         else {
-            frase = "Você não digitou uma letra válida.";
+            frase = "🚩 Você não digitou uma letra válida.";
         }
     }
 

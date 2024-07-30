@@ -11,7 +11,7 @@ const processICMSCalculation = () => {
 
     const finalPrice = calculatePriceWithICMS(costPrice, icmsRate);
 
-    document.getElementById('meuParagrafo').innerHTML = (`Preço de custo: R$ ${costPrice.toFixed(2)}\nTaxa de ICMS: ${icmsRate * 100}%\nPreço com ICMS: R$ ${finalPrice.toFixed(2)}`);
+    document.getElementById('meuParagrafo').innerHTML = (`<b>🫰 Preço de custo:</b> R$ ${costPrice.toFixed(2)} <br> <b>⚠️ Taxa de ICMS:</b> ${icmsRate * 100}% <br><b>💸 Preço com ICMS:</b> R$ ${finalPrice.toFixed(2)}`);
 };
 
 // Chama a função principal

@@ -49,12 +49,12 @@ document.getElementById('meuParagrafo').innerHTML = fraseFinal */
 
 
 function obterRespostas() {
-    var ano = parseInt(prompt("Em que ano estamos?"));
+    var ano = new Date().getFullYear();
     var anoNascimento = parseInt(prompt("Em que ano você nasceu?"));
     var nome = prompt("Digite aqui o seu nome"); 
 
     var idadeAtual = ano - anoNascimento;
-    var fraseFinal = "🤔 Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + " e ao final deste ano você terá " + idadeAtual + ", certo?";
+    var fraseFinal = "🤔 Entendi. O seu nome é " + nome + ", você nasceu em " + anoNascimento + " e ao final deste ano você terá " + idadeAtual + " anos, certo?";
 
     document.getElementById('meuParagrafo').innerHTML = fraseFinal;
 }
