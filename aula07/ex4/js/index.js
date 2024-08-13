@@ -23,7 +23,7 @@ function ehPrimo(numero) {
   
   // Chamamos a função e mostramos o resultado
   if (ehPrimo(numero)) {
-    console.log(numero + " é um número primo.");
+    alert(numero + " é um número primo.");
   } else {
-    console.log(numero + " não é um número primo.");
+    alert(numero + " não é um número primo.");
   }
